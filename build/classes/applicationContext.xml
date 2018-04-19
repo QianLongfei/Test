@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+         <!-- 1.快速入门 -->
+               <bean id="helloSpring" class="com.java.spring.a_quickstart.HelloSpringImpl"></bean>
+<!--               <property name="info" value="ss"></property>
+               </bean>
+ -->
+         <!-- end -->
+    
+         <!-- 2.1 Bean的定义 -->
+               <bean id="bean1" class="com.java.spring.b_instance.Bean1"></bean>
+         <!-- Bean的定义 -->
+         
+         
+         <!-- 2.2 利用静态工厂方法进行初始化 -->
+               <bean id="bean2" class="com.java.spring.b_instance.Bean2" factory-method="createInstance"></bean>
+               
+         <!-- 2.3 利用实例工厂进行初始化 -->
+               <bean id="bean3Factory" class="com.java.spring.b_instance.Bean3Factory"></bean>
+               
+               <bean id="bean3" factory-bean="bean3Factory" factory-method="getBean3"></bean>
+   
+</beans>
